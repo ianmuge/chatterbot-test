@@ -1,5 +1,6 @@
 (function connect() {
-    let socket = io.connect('http://localhost:5000');
+    // console.log(location);
+    let socket = io.connect(location.host);
     $("#usernameBtn").click(function () {
         console.log($("#username").val());
         socket.emit('change_username', { username: $("#username").val() });
